@@ -1,5 +1,7 @@
 # Gpio-Sim-3g-EC25
 
+[Datasheet of EC25 - Quectel](https://www.quectel.com/UploadImage/Downlad/Quectel_EC25_Hardware_Design_V1.3.pdf)
+
 ## DEFINATION
 
 ### DEFINE GPIOS
@@ -28,20 +30,22 @@ gpio_power + gpio_reset -> set High
 gpio_power: current status = High
 -> set Low -> wait power_on_time (110ms) -> set High
 ```
-MODE: OFF
+<b> 2. MODE: OFF </b>
 gpio_power: current status = High
 -> set Low -> wait power_off_time (660ms) -> set High
 -> wait wait_off_time (30s) -> print module off success
 
-MODE: RESET
+<b> 3. MODE: RESET </b>
 gpio_reset: current status = High
 -> set Low -> wait reset_time (400ms) -> set High
 
-MODE: UPDATE FIRMWARE MODULE VIA USB
+<b> 4. MODE: UPDATE FIRMWARE MODULE VIA USB </b>
 gpio_boot_usb: current status = LOW
 -> set High ... Update firmware -> set LoW
 
-NOTE: when startup
+<br>
+<b>NOTE</b>
+when startup
 VBAT: always on
 Reset: on
 power: on
