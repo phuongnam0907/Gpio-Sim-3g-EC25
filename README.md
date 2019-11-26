@@ -4,25 +4,30 @@
 
 ### DEFINE GPIOS
 
+```
 SC20_GPIO_8 => EC25_USB_BOOT => gpio_boot_usb
 SC20_GPIO_9 => EC25_PWRKEY => gpio_power
 SC20_GPIO_10 => EC25_RESET => gpio_reset
+```
 
 ### DEFINE TIMES
 
+```
 power_on_pre_time = 30ms
 power_on_time = 110ms
 power_off_time = 660ms
 wait_off_time = 30s
 reset_time = 400ms
+```
 
 ## DESCRIBE ACTION
-MODE: ON
+1. MODE: ON
+```
 -> check VBAT on -> wait power_on_pre_time (30ms)
 gpio_power + gpio_reset -> set High
 gpio_power: current status = High
 -> set Low -> wait power_on_time (110ms) -> set High
-
+```
 MODE: OFF
 gpio_power: current status = High
 -> set Low -> wait power_off_time (660ms) -> set High
