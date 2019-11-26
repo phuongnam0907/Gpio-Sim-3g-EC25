@@ -23,33 +23,30 @@ reset_time = 400ms
 ```
 
 ## DESCRIBE ACTION
-<b> 1. MODE: ON </b>
-```
+<b> 1. MODE: ON </b><br>
 -> check VBAT on -> wait power_on_pre_time (30ms)
 gpio_power + gpio_reset -> set High
 gpio_power: current status = High
 -> set Low -> wait power_on_time (110ms) -> set High
-```
-<b> 2. MODE: OFF </b>
+<b> 2. MODE: OFF </b><br>
 gpio_power: current status = High
 -> set Low -> wait power_off_time (660ms) -> set High
 -> wait wait_off_time (30s) -> print module off success
 
-<b> 3. MODE: RESET </b>
+<b> 3. MODE: RESET </b><br>
 gpio_reset: current status = High
 -> set Low -> wait reset_time (400ms) -> set High
 
-<b> 4. MODE: UPDATE FIRMWARE MODULE VIA USB </b>
+<b> 4. MODE: UPDATE FIRMWARE MODULE VIA USB </b><br>
 gpio_boot_usb: current status = LOW
 -> set High ... Update firmware -> set LoW
 
-<br>
-<b>NOTE</b>
-when startup
-VBAT: always on
-Reset: on
-power: on
-then start [MODE: ON] to run the module
+<b>NOTE</b><br>
+When board startup...<br>
+* VBAT: always on
+* Reset: on
+* Power: on
+<br>Then start [MODE: ON] to run the module
 
 
 ## Add these lines
