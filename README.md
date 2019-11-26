@@ -23,23 +23,32 @@ reset_time = 400ms
 ```
 
 ## DESCRIBE ACTION
-<b> 1. MODE: ON </b><br>
+<b> 1. MODE: ON </b>
+```
 -> check VBAT on -> wait power_on_pre_time (30ms)
 gpio_power + gpio_reset -> set High
 gpio_power: current status = High
 -> set Low -> wait power_on_time (110ms) -> set High
-<b> 2. MODE: OFF </b><br>
+```
+
+<b> 2. MODE: OFF </b>
+```
 gpio_power: current status = High
 -> set Low -> wait power_off_time (660ms) -> set High
 -> wait wait_off_time (30s) -> print module off success
+```
 
-<b> 3. MODE: RESET </b><br>
+<b> 3. MODE: RESET </b>
+```
 gpio_reset: current status = High
 -> set Low -> wait reset_time (400ms) -> set High
+```
 
-<b> 4. MODE: UPDATE FIRMWARE MODULE VIA USB </b><br>
+<b> 4. MODE: UPDATE FIRMWARE MODULE VIA USB </b>
+```
 gpio_boot_usb: current status = LOW
 -> set High ... Update firmware -> set LoW
+```
 
 <b>NOTE</b><br>
 When board startup...<br>
@@ -73,7 +82,7 @@ gpio-sim-3g{
 };
 ```
 
-## PIN CONTROL
+### PIN CONTROL
 
 ```
 ec25-pin {
