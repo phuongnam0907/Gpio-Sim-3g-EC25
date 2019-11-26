@@ -21,7 +21,7 @@ reset_time = 400ms
 ```
 
 ## DESCRIBE ACTION
-1. MODE: ON
+1. <b> MODE: ON </b>
 ```
 -> check VBAT on -> wait power_on_pre_time (30ms)
 gpio_power + gpio_reset -> set High
