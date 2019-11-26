@@ -120,7 +120,7 @@ config GPIO_RESET_EC25
 CONFIG_GPIO_RESET_EC25=y
 ```
 
-### Add "DIP-SWITCH-STATUS"
+## Add "DIP-SWITCH-STATUS"
 
 ```
 echo 937 > /sys/class/gpio/export
