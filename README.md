@@ -124,11 +124,19 @@ CONFIG_GPIO_RESET_EC25=y
 
 ```
 echo 937 > /sys/class/gpio/export
-echo "in" > /sys/class/gpio/gpio937/direction
+echo in > /sys/class/gpio/gpio937/direction
 echo 939 > /sys/class/gpio/export
-echo "in" > /sys/class/gpio/gpio939/direction
+echo in > /sys/class/gpio/gpio939/direction
 echo 946 > /sys/class/gpio/export
-echo "in" > /sys/class/gpio/gpio946/direction
+echo in > /sys/class/gpio/gpio946/direction
 echo 945 > /sys/class/gpio/export
-echo "in" > /sys/class/gpio/gpio945/direction
+echo in > /sys/class/gpio/gpio945/direction
+chown system system /sys/class/gpio/gpio937/value
+chmod 0666 /sys/class/gpio/gpio937/value
+chown system system /sys/class/gpio/gpio939/value
+chmod 0666 /sys/class/gpio/gpio939/value
+chown system system /sys/class/gpio/gpio946/value
+chmod 0666 /sys/class/gpio/gpio946/value
+chown system system /sys/class/gpio/gpio945/value
+chmod 0666 /sys/class/gpio/gpio945/value
 ```

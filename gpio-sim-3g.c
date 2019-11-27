@@ -399,3 +399,4 @@ module_platform_driver(gpio_platform);
 
 MODULE_LICENSE("GPL v2");
 MODULE_AUTHOR("Le Phuong Nam <le.phuong.nam@styl.solutions>");
+MODULE_VERSION("1.0.0");
